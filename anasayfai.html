@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitaş Şirketi</title>
+    <link rel="stylesheet" href="anasayfai.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="anasayfai.js" defer></script>
+
+</head>
+<body>
+  <div id="loader">
+    <h1 id="mitas-text">
+      <span class="letter">M</span>
+      <span class="letter">i</span>
+      <span class="letter">t</span>
+      <span class="letter">a</span>
+      <span class="letter">ş</span>
+    </h1>
+  </div>
+
+   <header>
+    <div class="containerr">
+        <a href="70yilaozel.html" class="header-logo-link">
+            <img src="70yilmenuyan.png" alt="Mitaş Logo" class="header-logo-gorsel">
+        </a>
+
+        <h1 class="site-baslik">Mitaş Endüstiri</h1>
+
+        <nav>
+                <ul class="menu">
+                    <li><a href="anasayfai.html">Anasayfa</a></li>
+
+                    <!-- Hakkımızda Dropdown -->
+                    <li class="dropdown">
+                        <a href="yedekhak.html" class="dropbtn">Hakkımızda</a>
+                        <div class="dropdown-content">
+                            <a href="bizkimiz.html">Biz Kimiz?</a>
+                            <a href="vizyonvemisyon.html">Vizyon ve Misyon</a>
+                            <a href="fabirkaveofislerimiz.html">Fabrika ve Ofislerimiz</a>
+                            <a href="kisiselveri.html">Kişisel Verilerin Korunması</a>
+                            <a href="tarihcemiz.html">Tarihçemiz</a>
+                        </div>
+                    </li>
+
+
+                      <!-- Ürün ve Hizmetler Dropdown -->
+                <li class="dropdown">
+                    <a href="urunvehizmet.html" class="dropbtn">Ürünler ve Hizmetler</a>
+                    <div class="dropdown-content">
+                        <a href="enerjiyan.html">Enerji</a>
+                        <a href="teleyan.html">Telekomünikasyon</a>
+                        <a href="aydinlatmayan.html">Aydınlatma & Ulaşım</a>
+                        <a href="yensinenerjiyan.html">Yenilenebilir Enerji</a>
+                        <a href="kaplamayan.html">Yüzey Kaplama</a>
+                        <a href="yapisalyan.html">Yapısal Bağlantı Elemanları</a>
+                        <a href="tasarim.html">Mühendislik, Tasarım ve Test</a>
+                    </div>
+                </li>
+
+
+                    <!-- Sürdürülebilirlik Dropdown -->
+                    <li class="dropdown">
+<a href="surdurulebilirlik.html" class="dropbtn">Sürdürülebilirlik</a>
+                        <div class="dropdown-content">
+                            <a href="issagligi.html">İş Sağlığı ve Güvenliği</a>
+                            <a href="cevreyan.html">Çevre</a>
+                            <a href="etikh.html">Etik İlkeler ve Sosyal Uyum</a>
+                        </div>
+                    </li>
+
+
+                   <!-- Kalite Dropdown -->
+                    <li class="dropdown">
+                        <a href="kalite.html" class="dropbtn">Kalite</a>
+                        <div class="dropdown-content">
+                            <a href="kaliteyann.html">Kalite Güvence</a>
+                            <a href="kaliteilkiki.html">Kalite Kontrol</a>
+                            <a href="belgeleryan.html">Dökümantasyon</a>
+                        </div>
+                    </li>
+
+
+                     <!-- Kariyer Dropdown -->
+                    <li class="dropdown">
+                        <a href="kariyer.html" class="dropbtn">Kariyer</a>
+                        <div class="dropdown-content">
+                            <a href="Mitastahayat.html">Mitaş’ta Hayat</a>
+                            <a href="mitastailkadim.html">Mitaş’ta İlk Adım</a>
+                            <a href="mitasakademi.html">Mitaş Akademi</a>
+                            <a href="performans.html">Performans Yönetim Sistemi</a>
+                            <a href="sorumluluk.html">Sosyal Sorumluluk Projeleri</a>
+                            <a href="kariyerolanaklari.html">Kariyer Olanakları</a>
+                        </div>
+                    </li>
+
+
+                    <li><a href="iletisimyedek.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<script>
+    document.querySelectorAll('.menu a').forEach(link => {
+        if (link.href === window.location.href) {
+            link.style.color = '#001a4d'; // koyu lacivert
+        }
+    });
+</script>
+
+
+
+
+
+    <section class="video-container">
+        <video autoplay loop muted class="bg-video" id="hero-video">
+            <source src="mitasvideo3.mp4" type="video/mp4">
+            Tarayıcınız video etiketini desteklemiyor.
+        </video>
+        <div class="video-overlay">
+            <h2>Daha güçlü bir gelecek için çalışıyoruz</h2>
+            <p>Güçlü altyapımız ve yenilikçi çözümlerimizle sizinleyiz.</p>
+        </div>
+    </section>
+
+
+
+<section class="stats-container">
+    <!-- Başlık ve logo aynı satırda olacak şekilde düzenlendi -->
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="mitasyanlogo.png" alt="Mitaş Logo" class="mitaş-logo"> <!-- Logo buraya eklenecek -->
+        </div>
+        <h2 class="stats-title">Sayılarla Mitaş Endüstri</h2> <!-- Başlık burada olacak -->
+    </div>
+    
+    <div class="stat-item">
+        <div class="stat-circle">
+            <span class="stat-text">300M+</span>
+            <p>USD Yıllık Ciro</p>                         
+        </div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-circle">
+            <span class="stat-text">12</span>
+            <p>Tesis Sayısı</p>
+        </div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-circle">
+            <span class="stat-text">200.000MT</span>
+            <p>Yıllık Üretim</p>
+        </div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-circle">
+            <span class="stat-text">69+</span>
+            <p>Yıl Deneyim</p>
+        </div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-circle">
+            <span class="stat-text">3.000+</span>
+            <p>Çalışan</p>
+        </div>
+    </div>
+</section>
+
+<!-- Dönen Ana Yuvarlak Konteyneri -->
+<section class="rotating-circle-container">
+    <div class="rotating-circle"></div>
+</section>
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+<section>
+<div class="yazi-kutusu">
+<h2>PROJELERİMİZ</h2><br>
+    <p class="animasyonlu-yazi">⚙️ Kelebek Kaynaklı Kafes Direkler</p>
+    <p class="animasyonlu-yazi">🛠️ H-Tipi Kafes Direkler</p>
+    <p class="animasyonlu-yazi"> 🔩 H-Tipi Uçak İkaz Boyalı Kafes Direkler</p>
+    <p class="animasyonlu-yazi">⚡Bayrak Direği</p>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container4">
+    <div class="content4">
+        <h1>Sürdürülebilirlik</h1>
+        <p>Geleceğimiz için daha yeşil, daha sürdürülebilir çözümler üzerine odaklanıyoruz. Bize katılın ve dünyayı daha iyi bir yer haline getirelim.</p>
+        <a href="surdurulebilirlik.html" class="button4">Daha Fazlası</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Sayfanın üst kısmındaki kodlarını SİLME! -->
+<!-- Haberler bölümü en alta ekleniyor -->
+<footer class="haberler-bolumu">
+    <h2 class="haber-baslik">🌍 Mitaş'tan Dünyaya Haberler<br><br></h2>
+
+    <div class="haber-slider">
+        <div class="haber-container">
+            <div class="haber">
+                <a href="haber1.html"> <!-- Haber 1 linki -->
+                    <img src="deney.png" alt="Haber 1">
+                    <h3>⚡ Mitaş Endüstri Deney Laboratuvarları Yeni Yerleşkesinde Hizmet Vermeye Başladı!</h3>
+                    <p>Mitaş Endüstri olarak kalite ve müşteri memnuniyetini en üst düzeyde..</p>
+                </a>
+            </div>
+            <div class="haber">
+                <a href="haber2.html"> <!-- Haber 2 linki -->
+                    <img src="basketbol.png" alt="Haber 2">
+                    <h3>Mitaş Grup Basketbol Takımımız 4x4 Tek Pota Ligi 2024 Güz Sezonu Şampiyonu Oldu</h3>
+                    <p>4x4 Tek Pota Ligi 2024 Güz Sezonunda üstün bir performans sergileyerek...</p>
+                </a>
+            </div>
+            <div class="haber">
+                <a href="haber3.html"> <!-- Haber 3 linki -->
+                    <img src="3foto.png" alt="Haber 3">
+                    <h3>Mitaş Endüstri olarak İzmir'deki Yeni Fabrikamızın Açılışını Gerçekleştirdik</h3>
+                    <p>Şirketimizin büyümesine ve sektöre katkı sağlayacak olan İzmir'deki yeni fabrikamızın...</p>
+                </a>
+            </div>
+            <div class="haber">
+                <a href="haber4.html"> <!-- Haber 4 linki -->
+                    <img src="4fotohaber.png" alt="Haber 4">
+                    <h3>🌍Mitaş Endüstri, ISO 500 Listesinde 193. Sıraya Yükseldi</h3>
+                    <p>Türkiye'nin önde gelen endüstri kuruluşlarından Mitaş Endüstri, İstanbul Sanayi Odası...</p>
+                </a>
+            </div>
+            <div class="haber">
+                <a href="haber5.html"> <!-- Haber 5 linki -->
+                    <img src="arge.png" alt="Haber 5">
+                    <h3>Mitaş Endüstri, Türkiye Ar-Ge Araştırması'nda 168. Sıraya Yerleşti</h3>
+                    <p>Mitaş Endüstri, Türkiye'nin önde gelen Ar-Ge faaliyetleri araştırması olan...</p>
+                </a>
+            </div>
+            <div class="haber">
+                <a href="haber6.html"> <!-- Haber 6 linki -->
+                    <img src="son.png" alt="Haber 6">
+                    <h3>🌟Mitaş Endüstri, Türkiye'nin İlk 500 Sanayi Kuruluşu Arasında Yer Aldı</h3>
+                    <p>Türkiye'nin İlk 500 Sanayi Kuruluşu listesine 196’ıncı sıradan girmeyi başardı...</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+  <!-- Yukarı çıkma butonu (resimli) -->
+  <button id="scrollToTopBtn">
+    <img src="bgs.png" alt="Yukarı Çık">
+  </button>
+
+<script>
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollBtn.style.opacity = "1";
+        scrollBtn.style.pointerEvents = "auto";
+      } else {
+        scrollBtn.style.opacity = "0";
+        scrollBtn.style.pointerEvents = "none";
+      }
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo Bölümü -->
+        <div class="footer-logo-container">
+            <img src="yetologo.png" alt="Yeto Logo" class="footer-logo">
+        </div>
+
+        <!-- Sosyal Medya Linkleri -->
+        <div class="footer-links">
+            <div class="footer-link">
+                <a href="https://x.com/MitasGroup"><img src="xlogo.jpg" alt="Twitter" class="social-icon"></a>
+            </div>
+            <div class="footer-link">
+                <a href="https://www.instagram.com/mitas_group/"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" class="social-icon"></a>
+            </div>
+            <div class="footer-link">
+                <a href="https://tr.linkedin.com/company/mitasgroup"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon"></a>
+            </div>
+            <div class="footer-link">
+                <a href="https://www.facebook.com/mitasgroup/?locale=tr_TR"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon"></a>
+            </div>
+        </div>
+
+        <!-- Metin Linkleri -->
+        <div class="footer-texts">
+            <div class="footer-link"><a href="anasayfai.html"><span>Anasayfa</span></a></div>
+            <div class="footer-link"><a href="yedekhak.html"><span>Hakkımızda</span></a></div>
+            <div class="footer-link"><a href="urunvehizmet.html"><span>Ürünler ve Hizmetler</span></a></div>
+            <div class="footer-link"><a href="surdurulebilirlik.html"><span>Sürdürülebilirlik</span></a></div>
+            <div class="footer-link"><a href="kalite.html"><span>Kalite</span></a></div>
+            <div class="footer-link"><a href="kariyer.html"><span>Kariyer</span></a></div>
+            <div class="footer-link"><a href="iletisimyedek.html"><span>İletişim</span></a></div>
+        </div>
+
+        <!-- İletişim Bilgileri -->
+        <div class="footer-contact">
+            <p><strong>Adres:</strong> Eski Güvercinlik Yolu No: 113 Gazi 06560 Ankara / Türkiye</p>
+            <p><strong>Telefon:</strong> +90 312 296 20 00</p>
+            <p><strong>Fax:</strong> +90 312 296 29 99</p>
+            <p><strong>E-mail:</strong> <a href="mailto:info@mitasindustry.com">info@mitasindustry.com</a>, <a href="mailto:sales@mitasindustry.com">sales@mitasindustry.com</a></p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

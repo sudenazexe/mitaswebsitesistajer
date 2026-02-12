@@ -1,0 +1,1335 @@
+
+
+
+
+
+
+
+/* Görselin temel stili */
+.header-logo-gorsel {
+    height: 70px;
+    transition: transform 0.5s ease-out, filter 0.5s ease-out, margin-left 0.5s ease-out; /* Yumuşak geçiş için süreyi azaltıyoruz */
+    animation: logoGiris 3s ease-out; /* 3 saniyelik yumuşak geçiş */
+    cursor: pointer;
+    margin-left: 20px; /* Soldan biraz boşluk ekledik */
+}
+
+/* Hover efekti */
+.header-logo-gorsel:hover {
+    transform: scale(1.2) rotate(-2deg); /* Hoverda biraz daha büyük */
+    filter: brightness(1.5) drop-shadow(0 0 15px #ffffffaa);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Hoverda geçişi daha yumuşak yapıyoruz */
+}
+
+
+.containerrr {
+    position: relative;
+}
+
+/* Logo solda sabit */
+.header-logo-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.header-logo-gorsel {
+    height: 60px;
+}
+
+/* Başlık yine ortada */
+.site-baslik {
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 31, 63, 0.7);
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* Konteyner */
+.containerr {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('menthemen.png') no-repeat center center;
+    background-size: 130% 100%; /* Sağdan kırpma, üstten boşluk bırakmama */
+    padding: 0; /* Üstten boşluk yok */
+    overflow: hidden;
+
+}
+/* Bilgi Kutusu Genel Stili */
+.info-boxx {
+    background: linear-gradient(135deg, 
+        rgba(0, 32, 96, 0.8) 0%,     /* Hafif şeffaf Lacivert */
+        rgba(96, 125, 139, 0.8) 50%, /* Hafif şeffaf Grimsi Ton */
+        rgba(0, 191, 255, 0.8) 100%  /* Hafif şeffaf Açık Mavi */
+    );
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    backdrop-filter: blur(5px); /* Arka planı hafif bulanıklaştırır */
+}
+
+
+/* Sol Tarafa Geçen Küçük Kutu */
+.left-box {
+    width: 29%;
+    height: auto;
+    animation: slideFromLeft 1.5s ease-in-out forwards;
+}
+
+/* Küçültülmüş Büyük Kutu (Sağ Taraf) */
+.right-box {
+    width: 50%; /* Küçültüldü */
+    height: auto;
+    animation: slideFromRight 1.5s ease-in-out forwards;
+}
+
+/* Başlık */
+h11 {
+    font-size: 1.8em; /* Başlık biraz küçültüldü */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Paragraf */
+p {
+    font-size: 1.1em; /* Paragraf boyutu biraz küçültüldü */
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* Fade In Animasyonu */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Sağdan Gelen Animasyon */
+@keyframes slideFromRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Soldan Gelen Animasyon */
+@keyframes slideFromLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+
+
+
+
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.video-box {
+  width: 50vw;      /* Videonun genişliğini küçültür */
+  height: 50vh;     /* Videonun yüksekliğini küçültür */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    animation: fadeInUp 1s ease-out;
+}
+.content.visible {
+    opacity: 1;
+    transform: translateY(0);   /* Ekrana geldiğinde animasyon */
+}
+
+.content h2 {
+    color: #87CEEB;
+    font-family: 'Montserrat', sans-serif; /* Modern ve etkileyici font */
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Paragraf Stili - Daha Zarif */
+.content p {
+    color: #444;
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.8px;
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-style: italic;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;            /* Sol üst köşeye yerleştirme */
+    width: 200px;        /* Logoyu büyüttüm */
+    height: auto;
+    margin: 0px;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Animasyon tanımı */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Yatay çizgi stili */
+.horizontal-line {
+    width: 100%;
+    height: 4px;
+    background-color: #87CEEB;
+    position: relative;
+    margin-top: 30px; /* Başlığın üstünde yer alsın diye mesafe bırakıyoruz */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.video-container {
+ 
+   position: relative;
+    width: 97vw;
+    height: 60vh;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 255, 0.3);
+}
+
+/* Video */
+.custom-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Video üzerine karartma efekti */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.4); /* Karartma seviyesi */
+    z-index: 2;
+}
+
+/* Lacivert Çizgi */
+.divider {
+    width: 100%;
+    height: 4px;
+    background-color: #87CEEB;
+    margin-top: 20px;
+    border-radius: 2px;
+}
+
+
+
+
+/* Genel Bölüm Stili */
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+}
+
+/* Her Satırdaki Kartlar (Tamamen Ayrı Kutular) */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Genel Kutular */
+.info-box {
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Görsel Kutusu */
+.image-box {
+    background: rgba(255, 255, 255, 0.1); /* Hafif şeffaf görünüm */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Görseller */
+.info-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* Yazı Kutusu */
+.text-box {
+    background: linear-gradient(135deg, rgba(0, 32, 96, 0.8), rgba(0, 191, 255, 0.8));
+    color: white;
+    text-align: left;
+}
+
+/* Yazı Stili */
+.text-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-box p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .info-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .info-box {
+        width: 100%;
+    }
+
+    .info-image {
+        max-width: 100%;
+    }
+}
+
+
+
+
+/* Yukarı Çık Butonu */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0a74da; /* Buton rengi */
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 20px; /* Ok işaretinin boyutu */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Başlangıçta görünmez */
+    transition: opacity 0.3s ease; /* Yumuşak geçiş */
+    z-index: 1000;
+}
+
+/* Buton görünür hale geldiğinde */
+.scroll-to-top.show {
+    opacity: 1;
+}
+
+
+
+
+
+/* Ana Etik Bölümü */
+.etik-container {
+    position: relative;
+    padding: 30px;
+    margin-top: 100px; 
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(173, 216, 230, 0.5);
+    animation: bgColorChange 12s infinite alternate ease-in-out;
+    background: linear-gradient(45deg, #1B3A57, #4D4D4D, #3A6EA5, #5F9EA0, #3DA35D); /* Arka plan ekleniyor */
+    background-size: 400% 400%;
+}
+
+/* Başlık */
+.etik-title {
+    font-size: 32px;
+    color: #EAEAEA;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Paragraflar */
+.etik-content p {
+    font-size: 18px;
+    color: #F5F5F5;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards ease-out;
+}
+
+/* ✨ Işıltılar */
+.etik-container::before,
+.etik-container::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(100, 149, 237, 0.4) 10%, transparent 80%);
+    border-radius: 50%;
+    animation: sparkleEffect 4s infinite alternate ease-in-out;
+}
+
+.etik-container::before { top: -40px; left: -40px; }
+.etik-container::after { bottom: -40px; right: -40px; }
+
+/* 🎇 Işık Dalgalanması */
+.etik-container .light-beam {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(211, 211, 211, 0.2) 10%, transparent 80%);
+    opacity: 0.3;
+    animation: lightEffect 6s infinite alternate ease-in-out;
+}
+
+/* 🌈 Renk Değişim Animasyonu */
+@keyframes bgColorChange {
+    0%   { background: #1B3A57; } /* Lacivert */
+    20%  { background: #4D4D4D; } /* Gri */
+    40%  { background: #3A6EA5; } /* Mavi */
+    60%  { background: #5F9EA0; } /* Açık Mavi */
+    80%  { background: #3DA35D; } /* Yeşil */
+    100% { background: #1B3A57; } /* Tekrar Lacivert */
+}
+
+/* 🎬 Animasyonlar */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sparkleEffect {
+    0% { opacity: 0.2; transform: scale(0.9); }
+    50% { opacity: 0.5; transform: scale(1.1); }
+    100% { opacity: 0.2; transform: scale(0.9); }
+}
+
+@keyframes lightEffect {
+    0% { opacity: 0.2; transform: scale(1); }
+    100% { opacity: 0.4; transform: scale(1.1); }
+}
+
+
+
+
+
+
+
+
+
+
+.section-title-container {
+    margin-top: 100px; /* Başlık kutusunun üstünden 100px boşluk bırakılır */
+    display: flex;
+    justify-content: center;
+}
+.section-title {
+    font-size: 32px;
+    color: #003366; /* Lacivert renk */
+    text-align: center;
+    padding: 20px 30px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInTitle 2s ease-in-out;
+    margin-top: 100px; /* Başlık kutusunun üst kısmından 100px boşluk bırakılır */
+}
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.kutudakutu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.kutudakutu-item {
+    font-size: 18px;
+    margin: 15px 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    background-color: #ffffff !important; /* Beyaz arka plan, önemli kılındı */
+    color: #333; /* Siyah renkli metin */
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.kutudakutu-item::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: transparent;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.kutudakutu-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 127, 80, 0.8);
+}
+
+.kutudakutu-item:hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(0, 255, 255, 0.7),
+                0 0 25px rgba(255, 0, 255, 0.8);
+}
+
+.kutudakutu-item:nth-child(odd) {
+    background-color: #003366;
+}
+
+.kutudakutu-item:nth-child(even) {
+    background-color: #0b3c5d;
+}
+
+.kutudakutu-item:nth-child(1):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(255, 0, 0, 0.7),
+                0 0 30px rgba(255, 165, 0, 0.8);
+}
+
+.kutudakutu-item:nth-child(2):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(0, 255, 0, 0.7),
+                0 0 30px rgba(0, 0, 255, 0.8);
+}
+
+.kutudakutu-item:nth-child(3):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(255, 255, 0, 0.7),
+                0 0 30px rgba(75, 0, 130, 0.8);
+}
+
+.kutudakutu-item:nth-child(4):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(255, 105, 180, 0.7),
+                0 0 30px rgba(0, 255, 255, 0.8);
+}
+
+.kutudakutu-item:nth-child(5):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(0, 191, 255, 0.7),
+                0 0 30px rgba(0, 255, 127, 0.8);
+}
+
+.kutudakutu-item:nth-child(6):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(255, 69, 0, 0.7),
+                0 0 30px rgba(255, 99, 71, 0.8);
+}
+
+.kutudakutu-item:nth-child(7):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(0, 255, 255, 0.7),
+                0 0 30px rgba(75, 0, 130, 0.8);
+}
+
+.kutudakutu-item:nth-child(8):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(255, 215, 0, 0.7),
+                0 0 30px rgba(255, 105, 180, 0.8);
+}
+
+/* Varyasyonlar */
+.kutudakutu-item:nth-child(9):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(255, 165, 0, 0.7),
+                0 0 30px rgba(255, 69, 0, 0.8);
+}
+
+.kutudakutu-item:nth-child(10):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(0, 128, 128, 0.7),
+                0 0 30px rgba(32, 178, 170, 0.8);
+}
+
+.kutudakutu-item:nth-child(11):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(255, 0, 255, 0.7),
+                0 0 30px rgba(255, 99, 71, 0.8);
+}
+
+.kutudakutu-item:nth-child(12):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(123, 104, 238, 0.7),
+                0 0 30px rgba(75, 0, 130, 0.8);
+}
+
+.kutudakutu-item:nth-child(13):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(255, 69, 0, 0.7),
+                0 0 30px rgba(255, 105, 180, 0.8);
+}
+
+.kutudakutu-item:nth-child(14):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(64, 224, 208, 0.7),
+                0 0 30px rgba(255, 99, 71, 0.8);
+}
+
+.kutudakutu-item:nth-child(15):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(255, 99, 71, 0.7),
+                0 0 30px rgba(0, 128, 128, 0.8);
+}
+
+.kutudakutu-item:nth-child(16):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(0, 0, 255, 0.7),
+                0 0 30px rgba(0, 255, 255, 0.8);
+}
+
+.kutudakutu-item:nth-child(17):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(255, 165, 0, 0.7),
+                0 0 30px rgba(255, 215, 0, 0.8);
+}
+
+.kutudakutu-item:nth-child(18):hover::after {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(0, 255, 0, 0.7),
+                0 0 30px rgba(255, 165, 0, 0.8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: white;
+}
+
+/* 🌟 Eski Menü  */
+header {
+    background-color: #0074d9;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 31, 63, 0.7);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #003366;
+}
+
+nav ul li a.active {
+    color: #003366;
+    text-decoration: none;
+}
+
+/* 💠 KUTU TASARIMI */
+.cevre-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 30px;
+    background: #1D3C6D;
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px rgba(0, 255, 255, 0.7);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(0, 255, 150, 0.6);
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+margin-top:200px;
+}
+
+/* 🌟 Kutuyu hover yapınca parıldasın */
+.cevre-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 60px rgba(0, 255, 255, 1);
+}
+
+/* 📷 FOTOĞRAF TASARIMI */
+.cevre-img {
+    width: 50%;
+    border-radius: 20px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 0px 15px rgba(0, 255, 255, 0.7));
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+    animation: floatImage 3s infinite alternate ease-in-out;
+}
+
+/* 📸 Hafif dalgalı hareket */
+@keyframes floatImage {
+    0% { transform: translateY(-10px); }
+    100% { transform: translateY(10px); }
+}
+
+.cevre-img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 30px rgba(0, 255, 255, 1));
+}
+
+/* ✨ ÇEVRE BAŞLIĞI (Parıltılı Efekt) */
+.cevre-yazi {
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00ffff, #39ff14, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shineText 3s infinite alternate;
+}
+
+/* 🌀 Parıltılı yazı animasyonu */
+@keyframes shineText {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+/* 📜 PARAGRAF STİLİ */
+.cevre-paragraf {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.2s forwards 0.5s, pulse 2s infinite alternate 2s;
+}
+
+/* 🚀 Kayarak belirme */
+@keyframes fadeIn {
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 💫 Hafif nabız efekti */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.02); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gelecek-nesiller {
+    width: 90%;
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 50px;
+    border-radius: 20px;
+    background: rgba(10, 25, 80, 0.85); /* Daha koyu mavi ve hafif şeffaf */
+    box-shadow: 0 10px 30px rgba(30, 144, 255, 0.2); /* Hafif mavi gölge */
+    text-align: left;
+    position: relative;
+    backdrop-filter: blur(10px); /* Hafif bulanıklık efekti */
+}
+
+.gelecek-icerik {
+    max-width: 900px;
+    margin: auto;
+}
+
+.gelecek-nesiller h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: white; /* Başlık beyaz */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.parilt {
+    display: inline-block;
+    background: linear-gradient(45deg, #ffffff, #dcdcdc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: parlama 1.5s infinite alternate;
+}
+
+@keyframes parlama {
+    0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+    100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+}
+
+.gelecek-nesiller p {
+    font-size: 1.2rem; /* Paragraf boyutu */
+    line-height: 1.6;
+    color: white; /* Paragraf beyaz */
+    opacity: 0.9;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Genel Ayar */
+bodyy {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: #333;
+
+}
+
+
+
+/* Başlık */
+.sustainability-section h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #1a237e;
+    margin: 50px 0;
+    font-weight: 700;
+
+}
+
+/* Tablo Konteyner */
+.table-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+/* Satırlar */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px;
+    border-radius: 75px;
+
+}
+
+/* Satır Hover Efekti */
+.row:hover {
+    background-color:#ADD8E6;
+    transform: scale(1.02);
+}
+
+/* Kutular */
+.column {
+    position: relative;
+    width: 45%;  /* Kutuların genişliğini  yaparak daha küçük görünmelerini sağladık */
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Farklı kutu şekilleri */
+.box1 {
+    transform: rotate(-10deg);
+    top: 20px;
+}
+
+.box2 {
+    transform: rotate(10deg);
+    top: -20px;
+}
+
+.box3 {
+    transform: rotate(10deg);
+    top: 10px;
+}
+
+.box4 {
+    transform: rotate(-10deg);
+    top: -10px;
+}
+
+.box5 {
+    transform: rotate(-10deg);
+    top: 20px;
+}
+
+.box6 {
+    transform: rotate(10deg);
+    top: -20px;
+}
+
+.box7 {
+    transform: rotate(10deg);
+    top: 10px;
+}
+
+.box8 {
+    transform: rotate(-10deg);
+    top: -10px;
+}
+
+.box9 {
+    transform: rotate(-10deg);
+    top: 20px;
+}
+
+.box10 {
+    transform: rotate(10deg);
+    top: -20px;
+}
+
+/* Başlıklar */
+.column .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a237e;
+}
+
+/* Açıklamalar */
+.column .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+/* Hover ile animasyon */
+.column:hover {
+    transform: scale(1.05) rotate(0deg);
+}
+
+/* Seçim Stili */
+::selection {
+    background-color: #1a237e;
+    color: white;
+}
+.column {
+    background-color: #FFFFFF;
+    transition: all 0.3s ease; /* Animasyon geçiş efekti */
+}
+
+.column:hover {
+    background-color: #FFFFFF;
+    box-shadow: 5px 20px 10px rgba(26, 35, 126, 0.5); /* Lacivert gölge efekti */
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #003366; /* Lacivert arka plan */
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px; /* Üstten 50px boşluk bırak */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center; /* Ortaya hizalayalım */
+    width: 35%;
+    gap: 25px; /* Logolar arasındaki boşluğu ayarlamak için */
+    padding: 20px; /* İç boşluk ekleyelim */
+    border-radius: 10px; /* Hafif yuvarlatılmış köşeler */
+    height: 100px; /* Fazla büyük olmaması için yükseklik belirle */
+margin-top:80px;
+margin-left:-150px;
+}
+
+.footer-logo {
+    height:60px; /* Logoyu kontrol edelim */
+    width: auto; /* Oranları bozmamak için */
+margin-left:80px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-link {
+    margin: 1.5px; /* Önceki 10px'di, 5px'e düşürdüm */
+}
+
+.footer-link a {
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 30px; /* Logo boyutlarını ayarlamak için */
+    height: 30px;
+    transition: transform 0.3s ease; /* Büyüme efekti */
+}
+
+.footer-link a:hover .social-icon {
+    transform: scale(1.2); /* Hover efekti: Büyütme */
+}
+
+.footer-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%; /* Yazılar için alan */
+
+}
+
+.footer-texts .footer-link {
+    margin-bottom: 10px;
+}
+.footer-texts .footer-link a span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    color: white; /* Varsayılan renk */
+    transition: color 0.3s ease-in-out; /* Geçiş efekti ekleyelim */
+}
+
+/* Yazının üzerine gelindiğinde sadece renk değişikliği */
+.footer-texts .footer-link a:hover span {
+    color: #ff9f00; /* Hover efekti ile renk değişikliği */
+}/* Yazının içinden ışıltı geçmesi için */
+.footer-texts .footer-link a:hover span::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, #ff9f00, transparent);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: glow 1.5s infinite ease-in-out; /* Hareketli ışık efekti */
+}
+
+@keyframes glow {
+    0% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: #ff9f00;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* Menü elemanları */
+.menu a {
+    color: white; /* Başlangıçta yazı rengi beyaz */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Menü elemanları hover efekti */
+.menu a:hover {
+    color: #003366; /* Üzerine gelindiğinde yazı rengi daha koyu lacivert */
+}
+
+/* Aktif sayfa stilini uygulama */
+.menu a.active {
+    color: #003366; /* Aktif sayfa için yazı rengini koyu lacivert yap */
+}
+
+/* Dropdown menü için stil */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 116, 217, 0.7); /* Şeffaflık eklendi */
+    min-width: 200px; /* Daha uzun kutu genişliği */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px; /* Kenarları oval yapıyoruz */
+    text-align: left; /* Yazıları sola hizaladık */
+}
+
+/* Menü elemanları */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px; /* Menü elemanlarının köşelerini oval yapıyoruz */
+}
+
+/* Menü elemanları hover efekti */
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* Hover ile dropdown menüyü gösterme */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+ .geri-don-link {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background-color: rgba(0, 51, 102, 0.6); /* Şeffaf lacivert */
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.geri-don-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: rgba(0, 51, 102, 0.8); /* Üzerine gelince biraz daha belirgin */
+}
+
+
+
+  /* Yukarıya çıkma butonu */
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #001f4d, #00bfff);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 9999;
+      box-shadow: 0 0 15px #00bfff, 0 0 25px #00bfff, 0 0 35px #00bfff;
+      animation: pulseGlow 2s infinite;
+      transition: opacity 0.6s ease, transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #scrollToTopBtn:hover {
+      transform: scale(1.1);
+    }
+
+    #scrollToTopBtn img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+      }
+      50% {
+        box-shadow: 0 0 20px #00e0ff, 0 0 35px #00e0ff, 0 0 45px #00e0ff;
+      }
+      100% {
+        box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+      }
+    }

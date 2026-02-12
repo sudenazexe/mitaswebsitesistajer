@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stajyer Başvuru Formu</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="stylejs.js" />
+
+</head>
+<body>
+  <div class="form-container">
+    <h1>Stajyer Başvuru Formu</h1>
+    <form>
+      <label>TC</label>
+      <input type="text" maxlength="11" />
+
+      <label>İsim Soyisim</label>
+      <input type="text" />
+
+      <label>Telefon</label>
+      <input type="tel" placeholder="05XX XXX XX XX" />
+
+      <label>E-posta</label>
+      <input type="email" />
+
+      <label>Adres</label>
+      <textarea maxlength="255" oninput="updateCharCount(this)"></textarea>
+      <small>Kalan karakter: <span id="charCount">255</span></small>
+
+      <label>Okul Türü</label>
+      <select>
+        <option>Seçiniz</option>
+        <option>Meslek Lisesi</option>
+        <option>Üniversite</option>
+      </select>
+
+      <label>Okul Adı</label>
+      <input type="text" />
+
+      <label>Bölüm</label>
+      <input type="text" placeholder="Önce Okul Türü Seçiniz" />
+      <label class="inline"><input type="checkbox" /> Bölümüm listede yok</label>
+
+      <label>Sınıf</label>
+      <input type="number" min="1" max="5" />
+
+      <label>Staj Başlangıcı</label>
+      <input type="text" placeholder="gg.aa.yyyy" />
+
+      <label>Staj Bitişi</label>
+      <input type="text" placeholder="gg.aa.yyyy" />
+
+      <label>Staj Süresi (Hafta)</label>
+      <input type="number" min="1" max="52" />
+
+      <label>Önceki Staj Deneyimleri</label>
+      <textarea></textarea>
+
+      <label>Sosyal Aktiviteler</label>
+      <textarea></textarea>
+
+      <label>Sigara Kullanıyor musunuz?</label>
+      <select>
+        <option>Seçiniz</option>
+        <option>Evet</option>
+        <option>Hayır</option>
+      </select>
+
+      <label>Kariyer Planlarınız</label>
+      <textarea></textarea>
+
+      <label>Kendinizi Tanımlayın</label>
+      <textarea></textarea>
+
+      <label>Okuduğunuz Bölümü Seçme Amacınız</label>
+      <textarea></textarea>
+
+      <label>Okul İçi ve Dışı Başarılarınız</label>
+      <textarea></textarea>
+
+      <label>Eğitiminiz Sırasında Kendinizi Geliştirdiğiniz Alanlar</label>
+      <textarea></textarea>
+
+      <label>Referansınız var ise lütfen belirtiniz</label>
+      <textarea></textarea>
+
+      <label>CV Yükleme Alanı:</label>
+      <input type="file" />
+
+      <label class="inline">
+        <input type="checkbox" required />
+        Aydınlatma metnini okudum, onaylıyorum.
+      </label>
+
+      <button type="submit">Başvuruyu Gönder</button>
+    </form>
+  </div>
+
+<div id="basvuruMesaji" class="gizli">Başvuru gönderildi!</div>
+
+<script>
+  function updateCharCount(el) {
+    const max = el.getAttribute('maxlength');
+    const count = document.getElementById('charCount');
+    count.textContent = max - el.value.length;
+  }
+
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Test için gönderimi engelle
+
+    const mesaj = document.getElementById("basvuruMesaji");
+    mesaj.style.display = "block";
+    mesaj.classList.remove("fade-out"); // tekrar animasyon için
+    mesaj.classList.add("basvuru-mesaji");
+
+    setTimeout(() => {
+      mesaj.style.display = "none";
+    }, 3000);
+  });
+</script>
+
+</body>
+</html>

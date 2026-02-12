@@ -1,0 +1,100 @@
+   <link rel="stylesheet" href="kariyer.css"> <!-- CSS dosyasını bağlayacağız -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="kariyer.js"></script>
+
+
+
+
+<div class="bottom-section animate-on-scroll">
+  <h2 class="heading-darkblue">Sosyal Sorumluluk Projeleri</h2>
+  <h3 class="heading-blue">Biz, ülkemizin ve insanımızın geleceğine yatırım yapıyoruz</h3>
+  <p class="right-paragraph">
+    Mitaş Endüstri olarak, tüm çalışanlarımızın ortak katılımlarıyla toplumu geliştirmeye yönelik,
+    toplumsal sorunlara çözüm üreten proje ve organizasyonlar gerçekleştirmeyi hedefliyoruz.
+  </p>
+  <p class="right-paragraph">
+    Hayata geçirdiğimiz tüm sosyal sorumluluk projelerimizde demokrasinin, insan haklarının ve çevrenin korunmasına
+    yönelik öncü rol almaya özen gösteriyoruz. Kadının toplumdaki rolünü güçlendirmek adına kadınları destekleyen
+    politikalar yürütüyoruz.
+  </p>
+</div>
+<script>
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+  }
+
+  function handleScrollAnimation() {
+    const section = document.querySelector('.animate-on-scroll');
+    if (section && isInViewport(section)) {
+      section.classList.add('visible');
+      window.removeEventListener('scroll', handleScrollAnimation);
+    }
+  }
+
+  window.addEventListener('scroll', handleScrollAnimation);
+  window.addEventListener('load', handleScrollAnimation);
+  window.addEventListener('resize', handleScrollAnimation); // ekran değişirse de kontrol et
+</script>
+
+
+
+
+
+
+
+<div class="surekli-iyileştirme-section">
+  <div class="surekli-iyileştirme-content">
+    <h3>Gelecek için
+birlikte…</h3>
+    <p>
+      Çalışanlarımızı, sosyal sorumluluk bilinciyle yer alacakları uygun sosyal faaliyetlere gönüllü olmaları konusunda destekliyoruz. Afet, acil yardım, eğitim ihtiyaçları gibi konularda tüm Mitaş Ailesi olarak yardım eli uzatmak için bir araya gelmekteyiz. Yasal yükümlülüklerin ötesinde, en iyi çevresel çözümleri uygulamak ve çevre bilincini artıracak her türlü girişime destek sağlamak, genç yeteneklere, öğrencilere, milli sporculara destek veren ve teşvik eden faaliyetler içinde bulunmak önceliğimizdir.
+    </p>
+  </div>
+</div>
+
+
+<div class="image-section">
+  <div class="image-card">
+    <img src="odtu.png" alt="Projelerimiz">
+    <div class="overlay-text">Mitaş Yatırım Genel Müdürü Serap Cılız, ODTÜ Robot Topluluğu'nu ziyaret etti.</div>
+  </div>
+  <div class="image-card">
+    <img src="minikler.png" alt="Çevreye Duyarlılık">
+    <div class="overlay-text">Minik öğrencilerimizin uzaktan eğitimlerini desteklemek için tabletler hediye ettik.</div>
+  </div>
+  <div class="image-card">
+    <img src="kadinlaronem.jpg" alt="Topluma Katkı">
+    <div class="overlay-text">Dünya Kadınlar Günü kapsamında, Mitaş Grup'un kadın çalışanlarıyla birlikte ağaç diktik</div>
+  </div>
+</div>
+
+<script>
+  function animateOnScroll() {
+    const cards = document.querySelectorAll('.image-card');
+
+    cards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight - 100;
+
+      if (isVisible) {
+        card.classList.add('animate');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animateOnScroll);
+  window.addEventListener('load', animateOnScroll);
+</script>
+
+
+<a href="kariyer.html" class="geri-don-link">
+  <span>Kariyer </span><br>
+  <span>Sayfasına Geri Dön</span>
+</a>
+
+
+

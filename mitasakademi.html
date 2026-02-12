@@ -1,0 +1,98 @@
+    <link rel="stylesheet" href="kariyer.css"> <!-- CSS dosyasını bağlayacağız -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="kariyer.js"></script>
+
+
+<section class="mitas-akademi">
+  <div class="akademi-sol">
+    <img src="absol.png" alt="Mitaş Görseli" />
+  </div>
+  <div class="akademi-sag">
+    <div class="yazi-kutusu">
+      <h2>Mitaş Akademi</h2>
+      <h3>Kurumsal Fırsatlarla</h3>
+      <h3>Kişisel Gelişim İmkanı</h3>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<div class="deneyim-kutusu">
+  <img src="resims.jpg" alt="Arka Plan Resmi" class="deneyim-resmi">
+  <div class="deneyim-yazi">
+    <h2>Deneyim ve Keşif Odaklı Öğrenme Süreçleri</h2>
+    <p>
+      Şirket değerlerimizle uyumlu, sürekli gelişime ve yüksek performans kültürüne odaklanan programlarla çalışanlarımızın kişisel ve profesyonel gelişimlerini destekliyor; mesleki ve teknik eğitimlerle iş süreçlerine yönelik gelişim sağlamayı hedefliyoruz.
+    </p>
+  </div>
+</div>
+
+  <script>
+    // Intersection Observer'ı tanımlıyoruz
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        // Eğer element görünürse, animasyonu başlatıyoruz
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible'); // Görünür olduğunda 'visible' sınıfını ekle
+          observer.unobserve(entry.target); // İlk görünür olduğunda sadece bir kez çalışsın
+        }
+      });
+    }, {
+      threshold: 1 // Elementin en az %50'si göründüğünde animasyon başlar
+    });
+
+    // Kutu elementini gözlemlemeye başlıyoruz
+    const kutu = document.querySelector('.deneyim-kutusu');
+    observer.observe(kutu);
+  </script>
+
+
+ <!-- Sayfa Başlığı -->
+    <div id="page-title">
+        Mitaş Akademi Eğitim Modülleri
+    </div>
+
+    <!-- Akademi Modülleri -->
+    <section id="akademi-modulleri">
+        <div class="modul">
+            <div class="modul-title">İş Başı Eğitimleri</div>
+            <p class="modul-desc">Detaylı açıklamalar burada yer alacak.</p>
+        </div>
+        
+        <div class="modul">
+            <div class="modul-title">Kurum İçi ve Dışı Eğitimler</div>
+            <p class="modul-desc">Detaylı açıklamalar burada yer alacak.</p>
+        </div>
+        
+        <div class="modul">
+            <div class="modul-title">Kişisel Gelişim Eğitimleri</div>
+            <p class="modul-desc">Detaylı açıklamalar burada yer alacak.</p>
+        </div>
+        
+        <div class="modul">
+            <div class="modul-title">Teknik ve Mesleki Eğitimler</div>
+            <p class="modul-desc">Detaylı açıklamalar burada yer alacak.</p>
+        </div>
+        
+        <div class="modul">
+            <div class="modul-title">Aday Mühendislik Programı</div>
+            <p class="modul-desc">Detaylı açıklamalar burada yer alacak.</p>
+        </div>
+        
+        <div class="modul">
+            <div class="modul-title">Online Eğitim Platformu</div>
+            <p class="modul-desc">Detaylı açıklamalar burada yer alacak.</p>
+        </div>
+    </section>
+
+
+<a href="kariyer.html" class="geri-don-link">
+  <span>Kariyer </span><br>
+  <span>Sayfasına Geri Dön</span>
+</a>
+

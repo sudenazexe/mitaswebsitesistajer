@@ -1,0 +1,590 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    overflow-x: hidden; /* Yatay taşmayı engelle */
+}
+
+header {
+    background-color: #0074d9;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 31, 63, 0.7);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #003366;
+}
+ nav ul li a.active {
+    color: #003366;  /* Lacivert rengi */
+    text-decoration:none; /* Altı çizili yapalım */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Menü elemanları */
+.menu a {
+    color: white; /* Başlangıçta yazı rengi beyaz */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Menü elemanları hover efekti */
+.menu a:hover {
+    color: #003366; /* Üzerine gelindiğinde yazı rengi daha koyu lacivert */
+}
+
+/* Aktif sayfa stilini uygulama */
+.menu a.active {
+    color: #003366; /* Aktif sayfa için yazı rengini daha koyu lacivert yap */
+}
+
+/* Dropdown menü için stil */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 116, 217, 0.7); /* Şeffaflık eklendi */
+    min-width: 200px; /* Daha uzun kutu genişliği */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px; /* Kenarları oval yapıyoruz */
+    text-align: left; /* Yazıları sola hizaladık */
+}
+
+/* Menü elemanları */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px; /* Menü elemanlarının köşelerini oval yapıyoruz */
+}
+
+/* Menü elemanları hover efekti */
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* Hover ile dropdown menüyü gösterme */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* Arka Plan Görsel */
+.arka-plan {
+  background-image: url('iletisimilkresim.jpg'); /* Arka planda görsel */
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Yazı Kutusu */
+.yazi-kutusu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Kutuyu tam ortalayalım */
+  background-color: #f5f5f5; /* Kırık beyaz arka plan */
+  padding: 20px;
+  border-radius: 8px;
+  color: #333; /* Yazıyı koyu yapalım ki okunsun */
+  text-align: center;
+  width: 70%;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(25, 41, 122, 0.6); /* Hafif lacivert gölge ekliyoruz */
+  opacity: 0; /* Başlangıçta görünmesin */
+  transform: translate(-50%, -70%); /* Başlangıçta kutu yukarıda */
+  animation: slideIn 1s ease-out forwards; /* Animasyon ekliyoruz */
+}
+
+.yazi-kutusu h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.yazi-kutusu p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Yukarıdan gelen animasyon */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+/* Arka Plan Görsel */
+.arka-plan {
+  background-image: url('iletisimilkresim.jpg'); /* Arka planda görsel */
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Yazı Kutusu */
+.yazi-kutusu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Kutuyu tam ortalayalım */
+  background-color: #f5f5f5; /* Kırık beyaz arka plan */
+  padding: 20px;
+  border-radius: 8px;
+  color: #333; /* Yazıyı koyu yapalım ki okunsun */
+  text-align: center;
+  width: 70%;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(25, 41, 122, 0.6); /* Hafif lacivert gölge ekliyoruz */
+  opacity: 0; /* Başlangıçta görünmesin */
+  transform: translate(-50%, -70%); /* Başlangıçta kutu yukarıda */
+  animation: slideIn 1s ease-out forwards; /* Animasyon ekliyoruz */
+}
+
+.yazi-kutusu h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.yazi-kutusu p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Yukarıdan gelen animasyon */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+.form-section {
+  padding: 60px 20px;
+  background-color: #f0f8ff;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-container {
+  max-width: 700px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(25, 41, 122, 0.2);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+  margin-left: 50px;
+}
+
+.form-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+input, textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.kvkk {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.kvkk input[type="checkbox"] {
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.kvkk a {
+  color: #0074d9;
+  text-decoration: underline;
+}
+
+.kvkk a {
+  color: #0074d9;
+  text-decoration: underline;
+}
+
+button {
+  background-color: #0074d9;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+
+
+
+
+/* Form Container */
+.form-container {
+  display: flex;
+  justify-content: flex-start; /* Form ve logo arasını baştan başlatıyoruz */
+  align-items: center;  /* Yatayda ortalamak için */
+  padding: 20px;
+}
+
+/* İçeriği sol tarafa yaslamak için */
+.form-content {
+  width: 70%;  /* Formun genişliğini belirledik */
+}
+
+/* Logo */
+.form-logo {
+  margin-left: 30px;  /* Form ile araya mesafe eklemek için */
+  margin-top: 20px;
+}
+
+.form-logo img {
+  width: 100px;  /* Logo boyutunu küçültüyoruz */
+  height: auto;
+}
+
+/* Diğer form stillerini değiştirmedim */
+.form-container .animated-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1s forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo-container {
+  position: absolute;
+  top: 900px;   /* Yukarıdan boşluk */
+  right: 0;     /* Tam sağa yapışır */
+}
+
+/* Logo */
+.kucuk-logo {
+  width: 300px;     /* Büyüttüm, istersen 250-300 de yaparız */
+  height: auto;     
+  max-width: 100%;
+}
+
+
+/* Animasyon */
+.animate-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease;
+}
+
+.animate-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+
+
+/* Görselin temel stili */
+.header-logo-gorsel {
+    height: 70px;
+    transition: transform 0.5s ease-out, filter 0.5s ease-out, margin-left 0.5s ease-out; /* Yumuşak geçiş için süreyi azaltıyoruz */
+    animation: logoGiris 3s ease-out; /* 3 saniyelik yumuşak geçiş */
+    cursor: pointer;
+    margin-left: 20px; /* Soldan biraz boşluk ekledik */
+}
+
+/* Hover efekti */
+.header-logo-gorsel:hover {
+    transform: scale(1.2) rotate(-2deg); /* Hoverda biraz daha büyük */
+    filter: brightness(1.5) drop-shadow(0 0 15px #ffffffaa);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Hoverda geçişi daha yumuşak yapıyoruz */
+}
+
+
+.containerr {
+    position: relative;
+}
+
+/* Logo solda sabit */
+.header-logo-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.header-logo-gorsel {
+    height: 60px;
+}
+
+/* Başlık yine ortada */
+.site-baslik {
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 31, 63, 0.7);
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+
+
+
+  /* Yukarıya çıkma butonu */
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #001f4d, #00bfff);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 9999;
+      box-shadow: 0 0 15px #00bfff, 0 0 25px #00bfff, 0 0 35px #00bfff;
+      animation: pulseGlow 2s infinite;
+      transition: opacity 0.6s ease, transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #scrollToTopBtn:hover {
+      transform: scale(1.1);
+    }
+
+    #scrollToTopBtn img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+      }
+      50% {
+        box-shadow: 0 0 20px #00e0ff, 0 0 35px #00e0ff, 0 0 45px #00e0ff;
+      }
+      100% {
+        box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+      }
+    }
+
+
+
+
+.footer {
+    background-color: #003366; /* Lacivert arka plan */
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px; /* Üstten 50px boşluk bırak */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center; /* Ortaya hizalayalım */
+    width: 35%;
+    gap: 25px; /* Logolar arasındaki boşluğu ayarlamak için */
+    padding: 20px; /* İç boşluk ekleyelim */
+    border-radius: 10px; /* Hafif yuvarlatılmış köşeler */
+    height: 100px; /* Fazla büyük olmaması için yükseklik belirle */
+margin-top:80px;
+margin-left:-150px;
+}
+
+.footer-logo {
+    height:60px; /* Logoyu kontrol edelim */
+    width: auto; /* Oranları bozmamak için */
+margin-left:80px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-link {
+    margin: 1.5px; /* Önceki 10px'di, 5px'e düşürdüm */
+}
+
+.footer-link a {
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 30px; /* Logo boyutlarını ayarlamak için */
+    height: 30px;
+    transition: transform 0.3s ease; /* Büyüme efekti */
+}
+
+.footer-link a:hover .social-icon {
+    transform: scale(1.2); /* Hover efekti: Büyütme */
+}
+
+.footer-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%; /* Yazılar için alan */
+
+}
+
+.footer-texts .footer-link {
+    margin-bottom: 10px;
+}
+.footer-texts .footer-link a span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    color: white; /* Varsayılan renk */
+    transition: color 0.3s ease-in-out; /* Geçiş efekti ekleyelim */
+}
+
+.footer-texts .footer-link a:hover span {
+    color: #ff9f00; /* Sadece rengi değiştir */
+}
+@keyframes glow {
+    0% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: #ff9f00;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}

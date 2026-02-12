@@ -1,0 +1,149 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+header {
+    background-color: #0074d9;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 31, 63, 0.7);
+}
+
+/* Menü */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #003366;
+}
+
+nav ul li a.active {
+    color: #003366; /* Lacivert rengi */
+    text-decoration: none; /* Altı çizili yapalım */
+}
+
+/* Haberler Bölümü */
+.haberler-bolumu {
+    width: 100%;
+    background-color: #e3f2fd;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Başlık Animasyonu */
+.animasyonlu-baslik {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: baslikGel 1s forwards;
+    animation-delay: 0s;
+ color: #003366; /* Lacivert renk */    font-size: 1.8rem; /* Küçültülmüş boyut */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    font-weight: bold; /* Kalın yazı tipi */
+    letter-spacing: 1px; /* Harfler arası boşluk */
+ padding-left: 20px; /* Paragrafın başında 20px boşluk bırakır */
+}
+
+/* Paragraf Animasyonu */
+.animasyonlu-yazi {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: yaziGel 1s forwards;
+    animation-delay: 0.5s; /* Paragraf 0.5 saniye sonra gelsin */
+    font-size: 1.1rem; /* Küçültülmüş boyut */
+    color: black; /* Normal renk */
+    line-height: 1.6; /* Okunabilirliği arttıran satır yüksekliği */
+}
+
+/* Başlık Animasyonu */
+@keyframes baslikGel {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Paragraf Animasyonu */
+@keyframes yaziGel {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Paragraf Başında Boşluk */
+.paragraph {
+    font-size: 1rem;
+    color: #000; /* Normal yazı rengi */
+    padding-left: 20px; /* Paragrafın başında 20px boşluk bırakır */
+    margin: 0; /* Diğer kenarlardan boşluk olmasın */
+}
+.paragraphh {
+    font-size: 1rem;
+    padding-left: 20px; /* Paragrafın başında 20px boşluk bırakır */
+    margin: 0; /* Diğer kenarlardan boşluk olmasın */
+}
+
+
+/* Yıl Yazısı ve Çevresi - Alt Kısım */
+.footer {
+    background-color: #003366; /* Lacivert arka plan */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Geri dön butonunun stili */
+.geri-don {
+    position: fixed; /* Sayfa kaydırıldığında sabit kalır */
+    bottom: 40px; /* Ekranın altından 40px yukarıda */
+    right: 20px; /* Ekranın sağ tarafından 20px içeride */
+    color: #0074d9; /* Lacivert renk */
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline; /* Altı çizili */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Hafif parlaklık efekti */
+    transition: color 0.3s, text-shadow 0.3s; /* Hover ile parlama efekti */
+}
+
+.geri-don:hover {
+    color: #003366; /* Hover ile renk değişir */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Hover'da parlama efekti artar */
+}
+

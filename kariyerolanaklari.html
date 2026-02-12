@@ -1,0 +1,97 @@
+   <link rel="stylesheet" href="kariyer.css"> <!-- CSS dosyasını bağlayacağız -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="kariyer.js"></script>
+
+<section class="kariyer-kutu fadein-kutu">
+  <div class="kariyer-icerik">
+    <h2>Kariyer Olanakları</h2>
+    <p>Her geçen gün büyüyen Mitaş Endüstri Ailesi için yeni yetenekler arıyoruz.</p>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.4
+    });
+
+    const kutu = document.querySelector('.fadein-kutu');
+    if (kutu) {
+      observer.observe(kutu);
+    }
+  });
+</script>
+
+
+
+
+
+  <div class="info-section-wrapper">
+    <div class="info-image-container animated-box">
+      <img src="kompozitgörselilili.jpg" alt="Kompozit Görsel" class="info-image-element">
+    </div>
+    <div class="info-text-content-box animated-box">
+      <h2 class="info-title-heading">Benzersiz bir iş deneyimi sunuyoruz</h2>
+     <p class="info-description-paragraph">
+  Stratejik hedeflerimiz doğrultusunda kurum kültürü, değerleri ve davranış modeliyle örtüşen adayların istihdamı birinci önceliğimiz.
+  Kariyer olanaklarımızı inceleyerek, nasıl bu sürecin bir parçası olabileceğinizi keşfedin.
+  Mitaş Endüstri'deki iş fırsatlarına 
+  <a href="https://www.kariyer.net/firma-profil/mitas-3107-23150" class="custom-link">
+    buraya tıklayınız
+  </a> 
+  ulaşabilirsiniz.
+</p>
+</div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const animatedElements = document.querySelectorAll('.animated-box');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // Bir kez görünce durdurmak için:
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      animatedElements.forEach(el => observer.observe(el));
+    });
+  </script>
+
+
+
+
+
+
+
+<section class="full-blue-section">
+  <div class="full-blue-content">
+    <h2 class="full-blue-title">Mitaş Ailesine katılmak ister misiniz?</h2>
+    <p class="full-blue-text">
+      Yenilikçi, takım çalışmasına inanan, üretmekten keyif alan ve uzmanlığına güvenen ekip arkadaşları arıyoruz.<br>
+      MİTAŞ Endüstri’deki iş fırsatlarına LinkedIn ve kariyer.net adresleri üzerinden ulaşabilir, yayınlanan açık pozisyonlarımızı inceleyerek ve başvurunuzu iletebilirsiniz.
+    </p>
+    <div class="full-blue-links">
+      <a href="https://www.kariyer.net/firma-profil/mitas-3107-23150" target="_blank" rel="noopener" class="full-blue-link">Kariyer.net</a>
+      <a href="https://www.linkedin.com/company/mitas-endustri" target="_blank" rel="noopener" class="full-blue-link">LinkedIn</a>
+    </div>
+  </div>
+</section>
+<a href="kariyer.html" class="geri-don-link">
+  <span>Kariyer </span><br>
+  <span>Sayfasına Geri Dön</span>
+</a>
+

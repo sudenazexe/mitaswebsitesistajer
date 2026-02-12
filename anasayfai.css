@@ -1,0 +1,1361 @@
+/* Sayfa Genel Ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+
+
+/* Loader ekranı */
+#loader {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 1;
+  animation: backgroundTransition 6s ease-in-out forwards;
+}
+
+/* Arka plan renk geçişi */
+@keyframes backgroundTransition {
+  0% {
+    background-color: #0B0C10; /* Koyu lacivert */
+  }
+  100% {
+    background-color: #1f4e79; /* Normal lacivert */
+  }
+}
+
+/* Mitaş yazısı */
+#mitas-text {
+  font-size: 4rem;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+  animation: fadeInText 1s ease-in 1s forwards, bubbleEffect 3s 4s forwards;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Harfler sırayla yazılıyor */
+#mitas-text span {
+  opacity: 0;
+  display: inline-block;
+  animation: write 0.6s ease forwards;
+}
+
+#mitas-text span:nth-child(1) { animation-delay: 0s; }
+#mitas-text span:nth-child(2) { animation-delay: 0.6s; }
+#mitas-text span:nth-child(3) { animation-delay: 1.2s; }
+#mitas-text span:nth-child(4) { animation-delay: 1.8s; }
+#mitas-text span:nth-child(5) { animation-delay: 2.4s; }
+
+@keyframes write {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Parçalanma efekti */
+@keyframes bubbleEffect {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+    filter: blur(5px);
+  }
+}
+/* Loader ekranı */
+#loader {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: backgroundTransition 8s ease-in-out forwards;
+  background-color: #0B0C2A;
+}
+
+/* Arka plan lacivert geçişi */
+@keyframes backgroundTransition {
+  0% {
+    background-color: #0B0C2A;
+  }
+  100% {
+    background-color: #1f4e79;
+  }
+}
+
+/* Yazı stili */
+#mitas-text {
+  font-size: 4rem;
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  gap: 0.2em;
+}
+
+/* Harfler tek tek yumuşakça gelsin */
+#mitas-text span {
+  opacity: 0;
+  transform: translateY(20px);
+  display: inline-block;
+  animation: smoothWrite 0.6s ease forwards;
+}
+
+#mitas-text span:nth-child(1) { animation-delay: 0.3s; }
+#mitas-text span:nth-child(2) { animation-delay: 0.9s; }
+#mitas-text span:nth-child(3) { animation-delay: 1.5s; }
+#mitas-text span:nth-child(4) { animation-delay: 2.1s; }
+#mitas-text span:nth-child(5) { animation-delay: 2.7s; }
+
+@keyframes smoothWrite {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* İlk animasyon için keyframes */
+@keyframes logoGiris {
+    0% {
+        transform: scale(0.5) rotate(0deg); /* Başlangıçta daha küçük */
+        filter: brightness(0.7) drop-shadow(0 0 0 transparent);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.1) rotate(-2deg); /* Sonunda güzelce büyüsün */
+        filter: brightness(1.4) drop-shadow(0 0 15px #ffffffaa);
+        opacity: 1;
+    }
+}
+
+/* Görselin temel stili */
+.header-logo-gorsel {
+    height: 70px;
+    transition: transform 0.5s ease-out, filter 0.5s ease-out, margin-left 0.5s ease-out; /* Yumuşak geçiş için süreyi azaltıyoruz */
+    animation: logoGiris 3s ease-out; /* 3 saniyelik yumuşak geçiş */
+    cursor: pointer;
+    margin-left: 20px; /* Soldan biraz boşluk ekledik */
+}
+
+/* Hover efekti */
+.header-logo-gorsel:hover {
+    transform: scale(1.2) rotate(-2deg); /* Hoverda biraz daha büyük */
+    filter: brightness(1.5) drop-shadow(0 0 15px #ffffffaa);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Hoverda geçişi daha yumuşak yapıyoruz */
+}
+
+
+.containerr {
+    position: relative;
+}
+
+/* Logo solda sabit */
+.header-logo-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.header-logo-gorsel {
+    height: 60px;
+}
+
+/* Başlık yine ortada */
+.site-baslik {
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 31, 63, 0.7);
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* HEADER */
+header {
+    background-color: #0074d9;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 31, 63, 0.7);
+}
+
+/* MENÜ */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {we
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #003366;
+}
+nav ul li a.active {
+    color: #003366;  /* Lacivert rengi */
+    text-decoration:none;
+
+/*  BİLGİ BLOKLARI */
+.stat-item {
+    text-align: center;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover efekti */
+.stat-item:hover {
+    transform: scale(1.05);
+}
+
+/*  SAYILAR */
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0074d9;
+    margin: 10px 0;
+}
+
+/*  YAZILAR */
+.stat-item p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/*  İKONLAR */
+.stat-icon {
+    font-size: 3rem;
+    color: #0074d9;
+    margin-bottom: 10px;
+}
+}
+
+/* DROPDOWN MENÜ */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0074d9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*  VİDEO AYARLARI */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Ekranın %70'ini kaplasın */
+    overflow: hidden;
+}
+
+/*  VİDEO SOLUK HALE GETİRİLDİ */
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; /* Daha soluk hale getirildi */
+}
+
+/*  VİDEO ÜZERİNDEKİ YAZILAR */
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 51, 0.4); /* Lacivert soluk arka plan */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.video-overlay h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.video-overlay p {
+    font-size: 1.2rem;
+    margin-top: 10px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  ANA KONTEYNER */
+.stats-container {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f8fbff; /* Çok açık mavi */
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+/*  BAŞLIK STİLİ */
+.stats-title {
+    font-size: 2rem; /* Başlığı küçülttüm */
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    width: 100%;
+}
+
+/*  DAİRELER */
+.stat-circle {
+    width: 210px; /* Daireleri daha da büyüttüm */
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0074d9, #00c3ff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/*  HOVER EFEKTİ */
+.stat-circle:hover {
+    transform: scale(1.1);
+}
+
+/*  Yuvarlakların sürekli ışıldaması */
+.stat-circle::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(45deg);
+    top: -100%;
+    left: -100%;
+    animation: lightEffect 3s infinite; /* Işıldama hızı arttırıldı */
+}
+
+/* ışıltı animasyonu */
+@keyframes lightEffect {
+    0% {
+        top: -100%;
+        left: -100%;
+    }
+    100% {
+        top: 100%;
+        left: 100%;
+    }
+}
+
+/*  Yuvarlakların ışıldama ve dönen çizgi hızlarını sıralamak için */
+.stat-circle:nth-child(1)::before {
+    animation-delay: 0s; /* İlk yuvarlak hemen başlar */
+}
+
+.stat-circle:nth-child(2)::before {
+    animation-delay: 0.5s; /* İkinci yuvarlak 0.5 saniye sonra başlar */
+}
+
+.stat-circle:nth-child(3)::before {
+    animation-delay: 1s; /* Üçüncü yuvarlak 1 saniye sonra başlar */
+}
+
+.stat-circle:nth-child(4)::before {
+    animation-delay: 1.5s; /* Dördüncü yuvarlak 1.5 saniye sonra başlar */
+}
+
+
+/*  YAZI BOYUTLARI */
+.stat-text {
+    font-size: 1.8rem; 
+    font-weight: bold;
+}
+
+.stat-circle p {
+    font-size: 0.9rem; /* Açıklama  */
+    margin: 5px 0 0;
+}
+
+/*  ANİMASYONLAR */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes lightEffect {
+    0% {
+        top: -100%;
+        left: -100%;
+    }
+    100% {
+        top: 100%;
+        left: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  HEADER KONTEYNERİ */
+.header-container {
+    display: flex;
+    justify-content: flex-start; /* Logoyu sola hizalar */
+    gap: 10px;
+    position: relative;
+    width: 100%;,
+
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+
+}
+
+
+/*  BAŞLIK STİLİ */
+.stats-title {
+    font-size: 2rem; /* Başlık boyutunu ayarladık */
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 45px; /* Başlık altındaki boşluk */
+    text-transform: uppercase;
+    letter-spacing: 1.0px;
+    text-align: center; /* Başlık ortada */
+    width: 110%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sayfa Genel Ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+/* HEADER */
+header {
+    background-color: #0074d9;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 31, 63, 0.7);
+}
+
+/* MENÜ */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #003366;
+}
+
+/* VİDEO KONTEYNER */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 51, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* DAİRELER */
+.stats-container {
+    text-align: center;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.stat-item {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.stat-item:hover {
+    transform: scale(1.1);
+}
+
+.stat-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0074d9, #00c3ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.stat-circle:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dönen Yuvarlak Konteyneri */
+.rotating-circle-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+left:395px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+margin-top:10px;
+}
+
+/* Dönen Ana Yuvarlak */
+.rotating-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 70%;
+    background: linear-gradient(135deg, #0074d9, #00c3ff);
+    box-shadow: 0 0 50px rgba(0, 116, 217, 0.7);
+    animation: rotateCircle 8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+    transform-style: preserve-3d;
+top:220px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Dönen Yuvarlağın Görselleri */
+@keyframes rotateCircle {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+/* Animasyon Hızı */
+.rotating-circle {
+    animation: rotateCircle 8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+/* Dönen yuvarlakta görsel değiştirme */
+.rotating-circle {
+    background-image: url('direk.png'); /* İlk görsel */
+}
+
+/* Görsel değişimi */
+@keyframes changeImage {
+    0% { background-image: url('direk.png'); }
+    20% { background-image: url('direk2.png'); }
+    40% { background-image: url('direkkk.png'); }
+    60% { background-image: url('direkbayrak.png'); }
+    80% { background-image: url('direkadam.png'); }
+    
+}
+
+/* Görsel değişim animasyonu */
+.rotating-circle {
+    animation: rotateCircle 8s cubic-bezier(0.65, 0.45, 0.45, 1) infinite, changeImage 10s infinite;
+}
+
+
+
+
+
+@keyframes parlayanIsik {
+    0% { background-position: -200%; }
+    100% { background-position: 200%; }
+}
+
+
+
+
+
+
+
+
+
+.yazi-kutusu h2 {
+    text-align: center; /* Ortala */
+    font-size: 32px; /* Büyük başlık */
+    font-weight: bold; /* Kalın yazı */
+
+    color: white; /* Yazıyı beyaz yapalım ki parlama daha belirgin olsun */
+    background-image: linear-gradient(  
+        to right,  
+        #004080,  
+        #0080ff,  
+        #00d4ff,  
+        #0080ff,  
+        #004080  
+    ); /* Mavi tonlarında bir ışık geçişi */
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: parlayanIsik 4s infinite linear;
+}
+
+
+
+
+/* Yazı kutusunu biraz aşağı al */
+.yazi-kutusu {
+    position: absolute;
+    bottom: -900px; /* Daha aşağıda */
+    left: 32%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 sütunlu grid */
+    grid-gap: 20px; /* Kutular arası boşluk */
+    text-align: center;
+}
+
+/* Animasyonlu yazılar */
+.animasyonlu-yazi {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 20px;
+    border-radius: 10px;
+    min-width: 200px;
+}
+
+.animasyonlu-yazi.aktif {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container4 {
+    width: 90%; /* Genişliği artırdım */
+    max-width: 1100px; /* Maksimum genişlik büyüdü */
+    height: 500px; /* Yüksekliği büyüttüm */
+    margin: 320px auto 0; /* Üstten biraz boşluk bıraktım */
+    border-radius: 25px; /* Daha yumuşak oval kenarlar */
+    overflow: hidden;
+    position: relative;
+    background: url('surdurmek.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Kutunun altına gölge verdim */
+    transition: transform 0.3s ease-in-out, opacity 1s ease-out, transform 1s ease-out;
+margin-top:400px;
+    
+    /* Animasyon başlangıcı */
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Görünür olduğunda animasyon başlasın */
+.container4.aktif {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container4:hover {
+    transform: scale(1.02);
+}
+
+.container4::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Şeffaf siyah katman */
+    border-radius: 25px;
+}
+
+.content4 {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    padding: 30px;
+}
+
+h4 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+p4 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    max-width: 800px;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+/* Yazılar görünür olduğunda */
+.container4.aktif h4, 
+.container4.aktif p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.button4 {
+    text-decoration: none;
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.4s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.button4:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+    transform: scale(1.1);
+}
+
+.button4:active {
+    transform: scale(0.95);
+}
+
+/* "Daha fazla" yazısının stili */
+.daha-fazlasi {
+    text-decoration: none; /* Altı çizili olmasın */
+    color: #fff; /* Beyaz renk */
+    font-size: 1.4rem; /* Yazıyı biraz büyütelim */
+    font-weight: bold; /* Kalın yazı tipi */
+    letter-spacing: 1px; /* Harfler arasına biraz mesafe */
+    text-transform: uppercase; /* Büyük harfler */
+    padding: 12px 25px; /* İçerik paddingi */
+    border-radius: 50px; /* Oval kenarlar */
+    background: rgba(40, 167, 69, 0.6); /* Şeffaf yeşil arka plan */
+    box-shadow: 0 5px 20px rgba(0, 128, 0, 0.5); /* Gölgelendirme efekti */
+    transition: all 0.3s ease-in-out; /* Geçiş efekti */
+    display: inline-block;
+    position: absolute; /* Butonu konumlandırmak için absolute kullandım */
+    left: 20px; /* Sol tarafta olacak */
+    bottom: 20px; /* Alt tarafta olacak */
+}
+
+/* Buton hover efekti */
+.daha-fazlasi:hover {
+    background: rgba(40, 167, 69, 0.8); /* Hoverda daha yoğun yeşil */
+    transform: translateY(-5px); /* Yukarı kayma efekti */
+    box-shadow: 0 10px 30px rgba(0, 128, 0, 0.6); /* Gölge daha belirgin */
+}
+
+/* Butona basınca küçülme efekti */
+.daha-fazlasi:active {
+    transform: translateY(2px); /* Basınca aşağı kayma */
+    box-shadow: 0 5px 15px rgba(0, 128, 0, 0.4); /* Gölge kaybolacak */
+}
+
+/* "Daha fazla" butonuna parıltı efekti */
+.daha-fazlasi::before {
+    content4: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.6s ease-out;
+    border-radius: 50%;
+}
+
+.daha-fazlasi:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+}
+
+/* Container içindeki yazılar solda hizalı olacak */
+.container4 .content4 {
+    position: relative;
+    text-align: left; /* Sol hizalama */
+    color: white;
+    z-index: 1;
+    padding: 30px;
+    max-width: 800px; /* Yazı alanı genişliği */
+}
+
+/* Başlık */
+.container4 .content4 h4 {
+    font-size: 3.5rem; /* Büyük başlık */
+    font-weight: bold; /* Kalın yazı */
+    letter-spacing: 2px; /* Harf arası mesafe */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-50px); /* Başlangıçta sola kaymış olacak */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Animasyonla gelmesi */
+}
+
+/* Paragraf */
+.container4 .content4 p4 {
+    font-size: 1.5rem; /* Normal yazı boyutu */
+    font-weight: 300;
+    max-width: 800px; /* Yazı alanı genişliği */
+    line-height: 1.6; /* Satır aralığı */
+    opacity: 0;
+    transform: translateX(-50px); /* Paragraf da soldan kayacak */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Animasyonlu geçiş */
+}
+
+/* Yazılar göründüğünde animasyon başlasın */
+.container4.aktif h4, .container4.aktif p4 {
+    opacity: 1;
+    transform: translateX(0); /* Yazılar görünür hale gelirken soldan kaymaz */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Genel Stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Haberler Bölümü */
+.haberler-bolumu {
+    width: 100%;
+    background: #e3f2fd; /* Hafif mavi arka plan */
+    padding: 80px 0;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* Başlık Stili - Gazete Tarzı */
+.haber-baslik {
+    font-family: "Georgia", "Times New Roman", serif; /* Gazete tarzı serif font */
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase; /* Büyük harf */
+    letter-spacing: 2px; /* Harfler arasında hafif boşluk */
+    color: #002147; /* Koyu mavi renk */
+}
+
+/* Haberler Slider */
+.haber-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+/* Haber Konteyner */
+.haber-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 sütunlu grid */
+    gap: 40px; /* Kutular arasındaki boşluk biraz arttı */
+    width: 100%; /* Ekranı daha çok kaplaması için genişletildi */
+    margin: auto;
+}
+
+/* Haber Kartları */
+.haber {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 30px; /* İç boşluk biraz arttı */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 480px; /* Kutuların yüksekliğini arttırdım */
+}
+
+/* Hover Efekti - Koyu Mavi Gölge */
+.haber:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 25px rgba(0, 33, 71, 0.6);
+}
+
+/* Haber Resmi */
+.haber img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Haber Başlığı */
+.haber h3 {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #003366;
+}
+
+/* Açıklama */
+.haber p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Hover Efekti - Koyu Mavi Gölge */
+.haber:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 25px rgba(0, 33, 71, 0.6); /* Daha koyu mavi gölge */
+}
+/* Link alt çizgisini kaldır */
+.haber a {
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    color: inherit; /* Rengi olduğu gibi korur, yani yazının rengini korur */
+}
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #003366; /* Lacivert arka plan */
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px; /* Üstten 50px boşluk bırak */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center; /* Ortaya hizalayalım */
+    width: 35%;
+    gap: 25px; /* Logolar arasındaki boşluğu ayarlamak için */
+    padding: 20px; /* İç boşluk ekleyelim */
+    border-radius: 10px; /* Hafif yuvarlatılmış köşeler */
+    height: 100px; /* Fazla büyük olmaması için yükseklik belirle */
+margin-top:80px;
+margin-left:-150px;
+}
+
+.footer-logo {
+    height:60px; /* Logoyu kontrol edelim */
+    width: auto; /* Oranları bozmamak için */
+margin-left:80px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-link {
+    margin: 1.5px; /* Önceki 10px'di, 5px'e düşürdüm */
+}
+
+.footer-link a {
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 30px; /* Logo boyutlarını ayarlamak için */
+    height: 30px;
+    transition: transform 0.3s ease; /* Büyüme efekti */
+}
+
+.footer-link a:hover .social-icon {
+    transform: scale(1.2); /* Hover efekti: Büyütme */
+}
+
+.footer-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%; /* Yazılar için alan */
+
+}
+
+.footer-texts .footer-link {
+    margin-bottom: 10px;
+}
+.footer-texts .footer-link a span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    color: white; /* Varsayılan renk */
+    transition: color 0.3s ease-in-out; /* Geçiş efekti ekleyelim */
+}
+
+/* Yazının üzerine gelindiğinde sadece renk değişikliği */
+.footer-texts .footer-link a:hover span {
+    color: #ff9f00; /* Hover efekti ile renk değişikliği */
+}/* Yazının içinden ışıltı geçmesi için */
+.footer-texts .footer-link a:hover span::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, #ff9f00, transparent);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: glow 1.5s infinite ease-in-out; /* Hareketli ışık efekti */
+}
+
+@keyframes glow {
+    0% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: #ff9f00;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* Dropdown menü için stil */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 116, 217, 0.7); /* Şeffaflık eklendi */
+    min-width: 200px; /* Daha uzun kutu genişliği */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px; /* Kenarları oval yapıyoruz */
+    text-align: left; /* Yazıları sola hizaladık */
+    left: 0; /* Menü elemanlarını sola hizalayın */
+}
+
+/* Menü elemanları */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px; /* Menü elemanlarının köşelerini oval yapıyoruz */
+    text-align: left; /* Menü öğelerinin metinlerini sola hizala */
+}
+
+/* Menü elemanları hover efekti */
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+/* Hover ile dropdown menüyü gösterme */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown {
+    position: relative; /* dropdown-content'in konumunu buna göre alır */
+}
+
+
+
+
+  /* Yukarıya çıkma butonu */
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #001f4d, #00bfff);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 9999;
+      box-shadow: 0 0 15px #00bfff, 0 0 25px #00bfff, 0 0 35px #00bfff;
+      animation: pulseGlow 2s infinite;
+      transition: opacity 0.6s ease, transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #scrollToTopBtn:hover {
+      transform: scale(1.1);
+    }
+
+    #scrollToTopBtn img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+      }
+      50% {
+        box-shadow: 0 0 20px #00e0ff, 0 0 35px #00e0ff, 0 0 45px #00e0ff;
+      }
+      100% {
+        box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00bfff;
+      }
+    }

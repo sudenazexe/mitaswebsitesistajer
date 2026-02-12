@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitaş Şirketi</title>
+    <link rel="stylesheet" href="iletisimyedek.css"> <!-- CSS dosyasını bağlayacağız -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+   <header>
+    <div class="containerr">
+        <a href="70yilaozel.html" class="header-logo-link">
+            <img src="70yilmenuyan.png" alt="Mitaş Logo" class="header-logo-gorsel">
+        </a>
+
+        <h1 class="site-baslik">Mitaş Endüstiri</h1>
+
+        <nav>
+
+                <ul class="menu">
+                    <li><a href="anasayfai.html">Anasayfa</a></li>
+
+                    <!-- Hakkımızda Dropdown -->
+                    <li class="dropdown">
+                        <a href="yedekhak.html" class="dropbtn">Hakkımızda</a>
+                        <div class="dropdown-content">
+                            <a href="bizkimiz.html">Biz Kimiz?</a>
+                            <a href="vizyonvemisyon.html">Vizyon ve Misyon</a>
+                            <a href="fabirkaveofislerimiz.html">Fabrika ve Ofislerimiz</a>
+                            <a href="kisiselveri.html">Kişisel Verilerin Korunması</a>
+                            <a href="tarihcemiz.html">Tarihçemiz</a>
+                        </div>
+                    </li>
+
+
+                      <!-- Ürün ve Hizmetler Dropdown -->
+                <li class="dropdown">
+                    <a href="urunvehizmet.html" class="dropbtn">Ürünler ve Hizmetler</a>
+                    <div class="dropdown-content">
+                        <a href="enerjiyan.html">Enerji</a>
+                        <a href="teleyan.html">Telekomünikasyon</a>
+                        <a href="aydinlatmayan.html">Aydınlatma & Ulaşım</a>
+                        <a href="yensinenerjiyan.html">Yenilenebilir Enerji</a>
+                        <a href="kaplamayan.html">Yüzey Kaplama</a>
+                        <a href="yapisalyan.html">Yapısal Bağlantı Elemanları</a>
+                        <a href="tasarim.html">Mühendislik, Tasarım ve Test</a>
+                    </div>
+                </li>
+
+
+                    <!-- Sürdürülebilirlik Dropdown -->
+                    <li class="dropdown">
+<a href="surdurulebilirlik.html" class="dropbtn">Sürdürülebilirlik</a>
+                        <div class="dropdown-content">
+                            <a href="issagligi.html">İş Sağlığı ve Güvenliği</a>
+                            <a href="cevreyan.html">Çevre</a>
+                            <a href="etikh.html">Etik İlkeler ve Sosyal Uyum</a>
+                        </div>
+                    </li>
+
+
+                   <!-- Kalite Dropdown -->
+                    <li class="dropdown">
+                        <a href="kalite.html" class="dropbtn">Kalite</a>
+                        <div class="dropdown-content">
+                            <a href="kaliteyann.html">Kalite Güvence</a>
+                            <a href="kaliteilkiki.html">Kalite Kontrol</a>
+                            <a href="belgeleryan.html">Dökümantasyon</a>
+                        </div>
+                    </li>
+
+
+                     <!-- Kariyer Dropdown -->
+                    <li class="dropdown">
+                        <a href="kariyer.html" class="dropbtn">Kariyer</a>
+                        <div class="dropdown-content">
+                            <a href="Mitastahayat.html">Mitaş’ta Hayat</a>
+                            <a href="mitastailkadim.html">Mitaş’ta İlk Adım</a>
+                            <a href="mitasakademi.html">Mitaş Akademi</a>
+                            <a href="performans.html">Performans Yönetim Sistemi</a>
+                            <a href="sorumluluk.html">Sosyal Sorumluluk Projeleri</a>
+                            <a href="kariyerolanaklari.html">Kariyer Olanakları</a>
+                        </div>
+                    </li>
+
+
+                    <li><a href="iletisimyedek.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+<script>
+    document.querySelectorAll('.menu a').forEach(link => {
+        if (link.href === window.location.href) {
+            link.style.color = '#001a4d'; // koyu lacivert
+        }
+    });
+</script>
+</div>
+
+<!-- Arka Plan Görsel ve Yazı Kutusu -->
+<section class="arka-plan">
+  <div class="yazi-kutusu">
+    <h1>İletişim</h1>
+    <p>Tüm paydaşlarımızla açık ve şeffaf iletişim kuracak iletişim kanallarına sahibiz.</p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="form-section">
+  <div class="form-container animated-item">
+    <h2>Her türlü bilgi talebiniz için <br> bizimle iletişim kurabilirsiniz</h2>
+
+    <form>
+      <div class="form-row">
+        <input type="text" placeholder="Adınız" required>
+        <input type="text" placeholder="Soyadınız" required>
+      </div>
+      <div class="form-row">
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Telefon" required>
+      </div>
+      <textarea placeholder="Mesaj" rows="5" required></textarea>
+
+     <label class="kvkk">
+  <input type="checkbox" required>
+  <span>
+    Verdiğim kişisel veri ve iletişim bilgilerimin Mitaş Endüstri San. Tic. A.Ş. tarafından, 6698 sayılı KVKK kapsamında işlenmesine onay veriyorum.
+    <br>
+    <a href="kisiselveri.html">KVKK belgelerini incelemek için tıklayabilirsiniz</a>
+  </span>
+</label>
+
+
+      <button type="submit">Gönder</button>
+    </form>
+  </div>
+</section>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.animated-item').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
+
+
+
+
+
+
+<div class="logo-container animate-right">
+  <img src="kucuklogo.png" alt="Logo" class="kucuk-logo">
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    const elements = document.querySelectorAll('.animate-right');
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
+
+
+
+
+
+
+
+
+  <!-- Yukarı çıkma butonu (resimli) -->
+  <button id="scrollToTopBtn">
+    <img src="bgs.png" alt="Yukarı Çık">
+  </button>
+
+<script>
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollBtn.style.opacity = "1";
+        scrollBtn.style.pointerEvents = "auto";
+      } else {
+        scrollBtn.style.opacity = "0";
+        scrollBtn.style.pointerEvents = "none";
+      }
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo Bölümü -->
+        <div class="footer-logo-container">
+            <img src="yetologo.png" alt="Yeto Logo" class="footer-logo">
+        </div>
+
+        <!-- Sosyal Medya Linkleri -->
+        <div class="footer-links">
+            <div class="footer-link">
+                <a href="https://x.com/MitasGroup"><img src="xlogo.jpg" alt="Twitter" class="social-icon"></a>
+            </div>
+            <div class="footer-link">
+                <a href="https://www.instagram.com/mitas_group/"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" class="social-icon"></a>
+            </div>
+            <div class="footer-link">
+                <a href="https://tr.linkedin.com/company/mitasgroup"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="social-icon"></a>
+            </div>
+            <div class="footer-link">
+                <a href="https://www.facebook.com/mitasgroup/?locale=tr_TR"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="social-icon"></a>
+            </div>
+        </div>
+
+        <!-- Metin Linkleri -->
+        <div class="footer-texts">
+            <div class="footer-link"><a href="anasayfai.html"><span>Anasayfa</span></a></div>
+            <div class="footer-link"><a href="yedekhak.html"><span>Hakkımızda</span></a></div>
+            <div class="footer-link"><a href="urunvehizmet.html"><span>Ürünler ve Hizmetler</span></a></div>
+            <div class="footer-link"><a href="surdurulebilirlik.html"><span>Sürdürülebilirlik</span></a></div>
+            <div class="footer-link"><a href="kalite.html"><span>Kalite</span></a></div>
+            <div class="footer-link"><a href="kariyer.html"><span>Kariyer</span></a></div>
+            <div class="footer-link"><a href="iletisimyedek.html"><span>İletişim</span></a></div>
+        </div>
+
+        <!-- İletişim Bilgileri -->
+        <div class="footer-contact">
+            <p><strong>Adres:</strong> Eski Güvercinlik Yolu No: 113 Gazi 06560 Ankara / Türkiye</p>
+            <p><strong>Telefon:</strong> +90 312 296 20 00</p>
+            <p><strong>Fax:</strong> +90 312 296 29 99</p>
+            <p><strong>E-mail:</strong> <a href="mailto:info@mitasindustry.com">info@mitasindustry.com</a>, <a href="mailto:sales@mitasindustry.com">sales@mitasindustry.com</a></p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

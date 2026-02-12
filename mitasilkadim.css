@@ -1,0 +1,156 @@
+
+/* Ana konteyner için stil */
+.mitas-staj-container {
+  max-width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+  padding: 0 20px;
+}
+
+.mitas-staj-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* İlk kutu: Görsel arka plan ve yazı */
+.ilk-adim-kutu {
+  background-image: url('ilkadim.jpg'); /* Görseli arka plan olarak ekliyoruz */
+  background-size: cover; /* Görselin kutuya sığmasını sağlıyoruz ve büyütüyoruz */
+  background-position: center; /* Görselin ortalanmasını sağlıyoruz */
+  height: 400px; /* Kutu yüksekliğini biraz büyütüyoruz */
+  width: 100%; /* Kutunun genişliğini 100% yapıyoruz */
+  margin-left: 0; /* Kutuyu sola tamamen yapıştırıyoruz */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px; /* Köşeleri yumuşatıyoruz */
+  overflow: hidden; /* Kenardan taşan görseli gizliyoruz */
+  opacity: 0; /* Başlangıçta görünmez */
+  transform: translateY(40px); /* Kutuyu aşağıdan kaydırıyoruz */
+  transition: all 1s ease; /* Animasyonlu geçiş */
+}
+
+/* Animasyon için görünür hale geldiğinde kutuyu yerine alıyoruz */
+.ilk-adim-kutu.visible {
+  opacity: 1;
+  transform: translateY(0); /* Kutuyu yerine yerleştiriyoruz */
+}
+
+/* Başlık stilini ayarlıyoruz */
+.ilk-adim-icerik h2 {
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Yazıyı daha belirgin yapmak için gölge ekliyoruz */
+  font-weight: 700;
+  margin: 0;
+  opacity: 0; /* Başlangıçta görünmez */
+  transform: translateY(40px); /* Yazıyı da aşağıdan kaydırıyoruz */
+  transition: all 1s ease; /* Yazı için animasyon */
+}
+
+/* Yazı görünür hale geldiğinde animasyon */
+.ilk-adim-kutu.visible .ilk-adim-icerik h2 {
+  opacity: 1;
+  transform: translateY(0); /* Yazıyı yerine getiriyoruz */
+}
+
+/* İkinci kutu: Başvuru koşulları listesi */
+.basvuru-kutusu {
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  background-color: #f5f7fa;
+}
+
+/* Başvuru başlığı */
+.basvuru-kutusu h3 {
+  font-size: 22px;
+  color: #1a237e;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Liste stili */
+.basvuru-listesi {
+  list-style: none; /* Liste işaretlerini kaldırıyoruz */
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+/* Liste elemanları */
+.basvuru-listesi li {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 32px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Tik işareti stilini ayarlıyoruz */
+.basvuru-listesi li::before {
+  content: "✔️"; /* Tik işareti ekliyoruz */
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 18px;
+  color: #1a237e;
+}
+
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes boxSlideIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.content {
+    background-image: url('yeniarka.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    color: white; /* Yazı rengi beyaz */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    border-radius: 15px; /* Yumuşak köşeler */
+    box-shadow: 0 4px 12px rgba(0, 38, 77, 0.5); /* Yumuşak lacivert gölge */
+    max-width: 1000px; /* Kutu genişliğini büyüttüm */
+    margin: 10px auto; /* Ortalamak için auto margin */
+    opacity: 0; /* Başlangıçta görünmez */
+    transition: opacity 1s ease-out; /* Opaklık animasyonu */
+    position: relative;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 38, 77, 0.5); /* Soluk lacivert renk */
+    z-index: 1; /* Katmanın üstte olmasını sağlamak */
+    border-radius: 15px; /* Gölgede de köşe yuvarlama */
+}
+

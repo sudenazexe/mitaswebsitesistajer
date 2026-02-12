@@ -1,0 +1,99 @@
+    <link rel="stylesheet" href="kariyer.css"> <!-- CSS dosyasını bağlayacağız -->
+<script src="kariyer.js"></script>
+
+
+<!-- Mitaş Staj Ana Konteyneri -->
+<div class="mitas-staj-container" id="mitasStaj">
+
+  <!-- İlk Kutumuz: Arka Plan + Yazı -->
+  <section class="ilk-adim-kutu">
+    <div class="ilk-adim-icerik">
+      <h2>Mitaş’ta İlk Adım</h2>
+    </div>
+  </section>
+
+  <!-- İkinci Kutumuz: Başvuru Koşulları Listesi -->
+  <section class="basvuru-kutusu">
+    <h3>Genel Başvuru Koşulları</h3>
+    <ul class="basvuru-listesi">
+      <li>Zorunlu staj yükümlülüğü bulunan ve okulu tarafından staj yapması onaylanmış olmak.</li>
+      <li>Üniversitelerin öncelikli bölümlerinden birinde eğitim görüyor olmak:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;➤ Makine, İnşaat, Endüstri, Kimya, Metalurji ve Malzeme, İmalat Mühendisliği, İİBF.
+      </li>
+      <li>Ön lisans bölümlerinde 2. sınıf öğrencisi olmak.</li>
+      <li>Lisans bölümlerinde 3. veya 4. sınıf öğrencisi olmak.</li>
+      <li>Meslek lisesi öncelikli alanlar:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;➤ Metal, Makine, Kaynak, Elektrik-Elektronik, Büro, Bilişim, Kimya, Muhasebe ve Finans.
+      </li>
+      <li>Mesleki ve teknik eğitim veren ortaöğretim kurumlarının 12. sınıf öğrencisi olmak.</li>
+    </ul>
+  </section>
+
+</div>
+
+<script>
+  // Sayfa scroll oldukça görünür sınıfları ekle
+  function handleScrollAnimation() {
+    const elements = document.querySelectorAll('.mitas-staj-container, .ilk-adim-kutu');
+
+    elements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight - 100;
+
+      if (isVisible) {
+        el.classList.add('visible');
+      }
+    });
+  }
+
+  // Sayfa yüklendiğinde ve scroll oldukça çalıştır
+  window.addEventListener('scroll', handleScrollAnimation);
+  window.addEventListener('load', handleScrollAnimation);
+</script>
+
+
+<div class="content">
+    <h1 class="title">Mitaş’ta Uzun Dönem Staj ve Aday Mühendislik</h1>
+    <p>Protokolümüzün olduğu üniversitelerle uzun dönem staj programları gerçekleştirmekteyiz.</p>
+    <p>Bu süreçte başarılı olarak izlenim bırakan stajyer ile iletişime devam edilerek, aday mühendis olarak part-time veya mezun olduklarında tam zamanlı Mitaş Endüstri çalışanı olmaları için iş fırsatı tanınmaktadır.</p>
+<p>Formunuzu bize <a href="mailto:insankaynaklari@mitasindustry.com">insankaynaklari@mitasindustry.com</a> adresinden ulaştırmanızın ardından başvurunuz değerlendirmeye alınacaktır. Meslek lisesi staj başvuruları Ağustos ayında, üniversite staj başvuruları Mayıs ayında yapılmaktadır.</p>
+</div>
+
+
+
+
+
+  <!-- Sayfa sonu kutusu -->
+  <section class="stajyer-kutu">
+    <a href="stajyer-formu.html">Stajyer Başvuru Formu için<br><strong>Buraya Tıklayınız</strong></a>
+  </section>
+
+
+<script>
+  function updateCharCount(el) {
+    const max = el.getAttribute('maxlength');
+    const count = document.getElementById('charCount');
+    count.textContent = max - el.value.length;
+  }
+
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Gerçek gönderimi engelle (test için)
+    
+    const mesaj = document.getElementById("basvuruMesaji");
+    mesaj.style.display = "block";
+    mesaj.classList.remove("basvuru-mesaji"); // eski animasyonu sıfırla
+    void mesaj.offsetWidth; // yeniden başlatmak için
+    mesaj.classList.add("basvuru-mesaji");
+
+    setTimeout(() => {
+      mesaj.style.display = "none";
+    }, 3000);
+  });
+</script>
+
+
+<a href="kariyer.html" class="geri-don-link">
+  <span>Kariyer </span><br>
+  <span>Sayfasına Geri Dön</span>
+</a>
+

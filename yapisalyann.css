@@ -1,0 +1,255 @@
+/* Genel stil */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f5f5f5; /* Sayfa arka planı */
+}
+
+/* Arka plandaki görsel için stil */
+.overlay {
+    height: 400px; /* Görselin yüksekliği burada küçük tutuluyor */
+    width: 100%; /* Görselin genişliği tüm sayfayı kaplıyor */
+    background-image: url('yanyapi.jpg'); /* Görseli ekliyoruz */
+    background-size: cover; /* Görselin boyutlarını uyumlu yapıyoruz */
+    background-position: center; /* Görseli ortalıyoruz */
+    background-repeat: no-repeat; /* Görselin tekrar etmesini engelliyoruz */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+    position: relative;
+}
+
+/* Başlık stili */
+h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255,255,255,0.6); /* Başlık etrafına ışıltı efekti */
+    color: white; /* Başlık rengi değişmesin */
+}
+
+/* İçerik başlığını lacivert yapıyoruz */
+.icerik strong {
+    font-size: 30px;
+    color: #003366; /* Lacivert rengi */
+    font-weight: bold;
+}
+
+/* İçerik kutusunu sola yaslıyoruz ve aşağıya alıyoruz */
+.icerik {
+    padding: 60px 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    margin-top: 120px; /* İçeriği biraz daha aşağı alıyoruz */
+    position: relative;
+    z-index: 1;
+
+    /* İçeriği sola yaslıyoruz */
+    width: 60%;
+    margin-left: 5%; /* Sol tarafta biraz boşluk bırakıyoruz */
+}
+
+/* Paragraf stili */
+p {
+    font-size: 18px; /* Paragrafın font boyutunu küçültüyoruz */
+    max-width: 800px;
+    line-height: 1.6;
+    text-shadow: none; /* Gölgeyi kaldırıyoruz */
+}
+
+.paragraf-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1800px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.paragraf {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+}
+
+
+
+
+
+
+.paragraf-gorsel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Paragraf kutusu */
+.paragraf-kutu {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Görsel kutusu */
+.gorsel-kutu {
+    flex: 1;
+    max-width: 400px;
+}
+
+.gorsel-kutu img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+.geri-don-link {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background-color: rgba(0, 51, 102, 0.6); /* Şeffaf lacivert */
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.geri-don-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: rgba(0, 51, 102, 0.8); /* Üzerine gelince biraz daha belirgin */
+}
+/* AOS animasyonu için başlangıç stili */
+[data-aos] {
+    opacity: 0; /* Başlangıçta öğeler saydam olacak */
+    transform: translateY(50px); /* Başlangıçta yukarıdan kayacak şekilde ayarlandı */
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Animasyon tamamlandığında stil */
+[data-aos].aos-animate {
+    opacity: 1; /* Animasyon bittiğinde tamamen görünür olacak */
+    transform: translateY(0); /* Öğenin konumu sıfırlanacak */
+}
+
+
+
+
+
+
+
+/* h1 sabit kalsın, elleme */
+
+/* Paragraf içindeki başlıkları lacivert yap */
+.paragraf strong,
+.paragraf-kutu strong {
+  color: #002b5b; /* lacivert */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Diğer paragraflar - göz yormayan gri */
+.paragraf p,
+.paragraf-kutu p,
+.highlight-box p {
+  color: #444; /* soft gri */
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Highlight kutusu başlıkları da uyumlu olsun */
+.highlight-box h2 {
+  color: #002b5b;
+  font-weight: bold;
+}
+.video-paragraf-container {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 60px auto;
+  max-width: 1800px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.arka-plan-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+ .video-paragraf-overlay {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 38, 77, 0.65); /* Daha derin lacivert */
+  color: white;
+  padding: 60px 40px;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  backdrop-filter: blur(0px);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+}
+.video-paragraf-overlay h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}  
+.video-paragraf-overlay {
+ height: 350px; /* Örneğin 500 piksel yüksekliğinde sabit olur */  
+margin: 0 auto;
+  max-width: 2900px;
+
+}
